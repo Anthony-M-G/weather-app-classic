@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8ba2d9; /* AliceBlue */
+}
+
+h1, h2 {
+    color: #191970; /* MidnightBlue */
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+form {
+    color: #483D8B; /* DarkSlateBlue */
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #4682B4; /* SteelBlue */
+    transition: border-color 0.3s ease;
+    font-size: 1em;
+}
+
+input[type="text"]:focus {
+    border-color: #6A5ACD; /* SlateBlue */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6A5ACD; /* SlateBlue */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #7B68EE; /* MediumSlateBlue */
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 1em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagen {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+}
+
+th {
+    background-color: #6A5ACD; /* SlateBlue */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+tr:nth-child(odd) {
+    background-color: darkgray;
+}
+
+tr:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+p {
+    color: #B22222; /* FireBrick */
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    table {
+        width: 90%;
+    }
+}

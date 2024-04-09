@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather Information</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<h1>Search Weather Information</h1>
+<form action="#" th:action="@{/weather}" method="get">
+    <input type="text" name="city" placeholder="Enter city name" required>
+    <button type="submit">Search</button>
+</form>
+<h2>Weather Information</h2>
+<div class="imagen"><img th:src="${weather.backgroundImg}" th:if="${weather != null}" th:width="400" th:height="200"></div>
+<table th:if="${weather != null}">
+    <tr>
+        <td>Country:</td>
+        <td th:text="${weather.name}"></td>
+    </tr>
+    <tr>
+        <td>Temperature:</td>
+        <td th:text="${weather.temperature}"></td>
+    </tr>
+    <tr>
+        <td>Humidity:</td>
+        <td th:text="${weather.humidity}"></td>
+    </tr>
+    <tr>
+        <td>Pressure:</td>
+        <td th:text="${weather.pressure}"></td>
+    </tr>
+    <tr>
+        <td>Wind Speed:</td>
+        <td th:text="${weather.windSpeed}"></td>
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td th:text="${weather.description}"></td>
+    </tr>
+    <tr>
+        <td>Latitude:</td>
+        <td th:text="${weather.latitude}"></td>
+    </tr>
+    <tr>
+        <td>Longitude:</td>
+        <td th:text="${weather.longitude}"></td>
+    </tr>
+</table>
+<p th:if="${weather == null}">No weather information available for the provided city.</p>
+
+</body>
+</html>
