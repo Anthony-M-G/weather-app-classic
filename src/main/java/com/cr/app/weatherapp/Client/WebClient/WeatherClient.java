@@ -18,8 +18,7 @@ public class WeatherClient implements IWeatherService {
     private final HandlerEx handlerEx;
     private final RestTemplate restTemplate;
     private String URL = "https://api.openweathermap.org/data/2.5/weather?q=";
-    private final String appid = "&appid=06d518f3d39c3494b1c6eea33e851147";
-
+    private final String appid = "";
     @Override
     public Object getWeather(String city) {
         try {
